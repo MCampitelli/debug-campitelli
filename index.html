@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="logo.svg" type="image/x-icon">
+    <title>debug tool</title>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo-header" src="logo.svg" alt="Logo">
+            <span>debug tool</span>
+        </div>
+        <div class="info">
+            <button onclick="openInfo()">i</button>
+        </div>
+    </header>
+
+    <nav>
+        <nav id="modalInfo" class="modal">
+            <nav class="modal-content" id="modal_content">
+                <span onclick="closeInfo()" class="close_info">&times;</span>
+                <nav class="panel_info">
+                    <nav class="texto_info"> 
+                        <p style="font-weight: bold;">Como utilizar a ferramenta</p>
+                        <hr>
+                        <p><b>1.</b> Escreva como termina as palavras que deseja utilizar e utilize os checkbox para controlar a ativação dessas palavras;</p>
+                        <p><b>2.</b> Agora insira o texto para o qual deseja criar o debug, exemplo o select ou bloco da rotina;</p>
+                        <p><b>3.</b> Agora selecione qual é a saída desejada e aperte em Formatar.</p>
+                        <p><b>4.</b> Por fim, podes copiar o resultado obtido ou realizar o processo novamente</p>
+                    </nav>
+                </nav>
+            </nav>
+        </nav>
+    </nav>
+  
+    <main>
+        <div class="panel panel-words">
+            <div class="input-group ig-1">
+                <input class="checkbox" type="checkbox" id="check1" checked>
+                <input class="ds_check" type="text" id="option1" placeholder="Digite algo">
+            </div>
+            <div class="input-group ig-2">
+                <input class="checkbox" type="checkbox" id="check2" checked>
+                <input class="ds_check" type="text" id="option2" placeholder="Digite algo">
+            </div>
+            <div class="input-group ig-3">
+                <input class="checkbox" type="checkbox" id="check3">
+                <input class="ds_check" type="text" id="option3" placeholder="Digite algo">
+            </div>
+            <div class="input-group ig-4">
+                <input class="checkbox" type="checkbox" id="check4">
+                <input class="ds_check" type="text" id="option4" placeholder="Digite algo">
+            </div>
+            <div class="input-group ig-5">
+                <input class="checkbox" type="checkbox" id="check5">
+                <input class="ds_check" type="text" id="option5" placeholder="Digite algo">
+            </div>
+        </div>
+        <div class="panel">
+            <h2>Insira o texto:</h2>
+            <textarea id="texto-inserido" class="area-texto" placeholder="Digite algo..."></textarea>
+            <div class="radio-container">
+                <label class="radio-label">
+                    <input type="radio" name="modo-formatacao" value="modo1" checked>
+                    Raise Application
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="modo-formatacao" value="modo2">
+                    Mensagem Abort
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="modo-formatacao" value="modo3">
+                    Insert em campo
+                </label>
+            </div>
+            <div class="area-button"> 
+                <a href="#" onclick="formatarTexto()" class="button">Formatar</a>
+            </div>
+        </div>
+        
+        <div class="panel panel2">
+            <h2>Resultado:</h2>
+            <pre id="texto-formatado"></pre>
+            <div class="area-button">
+                <a href="#" onclick="limparPainel()" class="button">Limpar</a>
+                <a href="#" onclick="copiarTexto()" class="button">Copiar</a>
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+        <div class="logo">
+            <img src="logo.svg" alt="Logo">
+        </div>
+        <div class="text">
+            debug toll 2024 - Marcelo Campitelli
+        </div>
+    </footer>
+</body>
+</html>

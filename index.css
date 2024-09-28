@@ -1,0 +1,217 @@
+:root {
+    --colorbutton: #644d39;
+    --colorbuttonhover: #594431;
+    --backgroundpanel: #A68F7B;
+    --background: #D9BCA3;
+    --backgroundareatext: #F2F2F2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+}
+  
+header {
+    background-color: var(--backgroundpanel);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 20px;
+}
+  
+header .logo {
+    display: flex;
+    align-items: center;
+}
+  
+.logo-header {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+  
+header .logo span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+  
+.close_info {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close_info:hover, .close_info:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.texto_info {
+    text-align: center;
+}
+  
+main {
+    padding: 20px;
+}
+  
+.panel {
+    background-color: var(--backgroundpanel);
+    padding: 5px 20px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.panel-words {
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+.ds_check {
+    border: 2px solid var(--colorbutton);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    margin: 0 5px;
+}
+
+.panel-words .input-group input {
+    height: 15px;
+}
+  
+.area-texto {
+    resize: none;
+    width: 97.5%;
+    height: 160px;
+    max-height: 160px;
+    padding: 10px;
+    background-color: var(--backgroundareatext);
+    border: 1px solid var(--backgroundareatext);
+    border-radius: 10px;
+}
+  
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+  
+.radio-label {
+    margin-right: 5px;
+}
+  
+.radio-input {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid ;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+  
+.radio-input:checked {
+    border-color: #007bff;
+}
+  
+.radio-input:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+  
+.area-button {
+    display: flex;
+    min-width: 100%;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+  
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--colorbutton);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+  
+.button:hover {
+    background-color: var(--colorbuttonhover);
+}
+  
+.panel2 {
+    margin-bottom: 80px;
+}
+  
+footer {
+    background-color: var(--backgroundpanel);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    height: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+}
+  
+footer .logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+footer .logo img {
+    width: 30px;
+    height: 30px;
+}
+  
+footer .text {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    font-weight: bold;
+}
